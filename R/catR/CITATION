@@ -1,0 +1,20 @@
+citHeader("To cite catR in publications use:")
+
+citEntry(entry = "Article",
+  title        = "Random Generation of Response Patterns under Computerized Adaptive Testing with the {R} Package {catR}",
+  author       = personList(as.person("David Magis"),
+                   as.person("Gilles Ra\\^iche")),
+  journal      = "Journal of Statistical Software",
+  year         = "2012",
+  volume       = "48",
+  number       = "8",
+  pages        = "1--31",
+  url          = "http://www.jstatsoft.org/v48/i08/",
+
+  textVersion  =
+  paste("David Magis, Gilles Raiche (2012).",
+        "Random Generation of Response Patterns under Computerized Adaptive Testing with the R Package catR.",
+        "Journal of Statistical Software, 48(8), 1-31.",
+        "URL http://www.jstatsoft.org/v48/i08/.")
+)
+

@@ -14,6 +14,8 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.script.ScriptException;
 import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.Iterator;
@@ -364,12 +366,16 @@ public class AdaptiveQuiz extends Quiz {
         // Set R-variable itemdiff
         r_itemdiff = sb.append(')').toString();
 
-        File path = new File("C:/Users/muehl/Documents/Offline Dateien/DUK/CAT/resources");
+
+        File path;
+        String userDir=System.getProperty("user.dir");
+        path = new File(userDir+"/R");
+        System.out.println(path);
         if (path.exists()) {
             // CatR 3.4 auto extract
             try {
                 path.mkdirs();
-                String sourcePath = "C:/Users/muehl/Documents/Offline Dateien/DUK/CAT/resources/catR.zip";
+                String sourcePath = path+"/catR.zip";
                 ZipFile zipFile = new ZipFile(sourcePath);
                 zipFile.extractAll(path.getAbsolutePath());
                 System.out.println("CatR extracted to " + path.getAbsolutePath());
