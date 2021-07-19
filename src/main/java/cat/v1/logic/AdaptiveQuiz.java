@@ -366,10 +366,8 @@ public class AdaptiveQuiz extends Quiz {
         // Set R-variable itemdiff
         r_itemdiff = sb.append(')').toString();
 
-
-        File path;
         String userDir=System.getProperty("user.dir");
-        path = new File(userDir+"/R");
+        File path = new File(userDir+"/R");
         System.out.println(path);
         if (path.exists()) {
             // CatR 3.4 auto extract
