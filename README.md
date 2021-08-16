@@ -1,4 +1,4 @@
-# CAT Module 2
+# CAT Module - JAVA
 This module serves as a backend for adaptive and classical online-tests in GeoGebra.
 
 ## Getting Started
